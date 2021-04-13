@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../jsonsearchdata.css">
+    <script type="text/javascript" src="../dataScripts/cameras.js"></script>
+    <script type="text/javascript" src="../jsonsearchdata.js"></script>
+    <title>Document</title>
+</head>
+
+<body onload="initaliazerCameras()">
+    <header>
+        <h2>What kind of information do you want to see today?</h2>
+    </header>
+
+    <div class="buttons">
+        <input type="radio" name="dataOption" id="incidents" value="incidents"
+            onclick="window.location = './data1.html';">
+        <label for="incidents">Incidents</label>
+        <input type="radio" name="dataOption" id="cameras" value="cameras" checked onclick="window.location = './data2.html';">
+        <label for="cameras">Cameras</label>
+        <input type="radio" name="dataOption" id="crimes" value="crimes" onclick="window.location = './data3.html';">
+        <label for="crimes">Crimes</label>
+
+    </div>
+    <div class="search">
+        <div class="search-input-area" id="IncidentsInput">
+            <div class="dialog-text">Search on camera description or quadrant</div>
+            <div class="input-field">
+                <label for="camera-description">Camera Description</label>
+                <input type="text" id="camera-description" placeholder="Camera 128">
+            </div>
+            <div class="input-field">
+                <label for="quadrant">Quadrant</label>
+                <input type="text" id="quadrant" placeholder="SW">
+            </div>
+            <div class="input-field">
+                <label for="location">Camera Location</label>
+                <input type="text" id="location" >
+            </div>
+        </div>
+    </div>
+    <div id="output-area" class="hidden">
+        <div id="searchvalue">
+            Searching for Cameras:
+        </div>  
+        <div id="searchresults">
+            <template id="card-template-cameras">
+                <!-- This is a card we want to clone -->
+                <div class="card">
+                    <div class="card-match">
+                        <label>Match</label>
+                        <span class="card-id"></span>
+                    </div>
+                    <div class="card-field">
+                        <label>Description: </label>
+                        <div class="card-description"></div>
+                    </div>
+                    <div class="card-field">
+                        <label>Quadrant: </label>
+                        <div class="card-accidentID"></div>
+                    </div>
+                    <div class="card-field">
+                        <label>Location: </label>
+                        <div class="card-location"></div>
+                    </div>
+                    <div class="card-field">
+						<label>Google Maps: </label>
+						<div class="card-maps"></div>
+					</div>
+                    <div class="card-field">
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div id="cards"></div>
+    </div>
+</body>
+
+</html>

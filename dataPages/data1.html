@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../jsonsearchdata.css">
+	<script type="text/javascript" src="../dataScripts/incidents.js"></script>
+	<script type="text/javascript" src="../jsonsearchdata.js"></script>
+    <title>Document</title>
+</head>
+<body onload="initaliazer()">
+    <header>
+		<h2>What kind of information do you want to see today?</h2>
+	</header>
+
+	<div class="buttons">
+		<input type="radio" name="dataOption" id="incidents" value="incidents" checked onclick="window.location = './data1.html';">
+		<label for="incidents">Incidents</label>
+		<input type="radio" name="dataOption" id="cameras" value="cameras" onclick="window.location = './data2.html';">
+		<label for="cameras">Cameras</label>
+		<input type="radio" name="dataOption" id="crimes" value="crimes" onclick="window.location = './data3.html';">
+		<label for="crimes">Crimes</label>
+	</div>
+    <div class="search">
+		<div class="search-input-area" id="IncidentsInput">
+			<div class="dialog-text">Search on Description, ID or Direction</div>
+			<div class="input-field">
+				<label for="description">Description</label>
+				<input type="text" id="description">
+			</div>
+			<div class="input-field">
+				<label for="direction">Direction</label>
+				<input type="text" id="direction">
+			</div>
+			<div class="input-field">
+				<label for="id">ID</label>
+				<input type="number" id="id">
+			</div>
+		</div>
+    </div>
+    <div id="output-area" class="hidden">
+		<div id="searchvalue" >
+			<!-- HTML will go here to say what you were searching on-->
+			Searching for Incidents:
+		</div>
+		<div id="searchresults">
+			<!-- see https://www.w3schools.com/tags/tag_template.asp -->
+			<template id="card-template-accidents">
+				<!-- This is a card we want to clone -->
+				<div class="card">
+					<div class="card-match">
+						<label>Match</label>
+						<span class="card-id"></span>
+					</div>
+					<div class="card-field">
+						<label>Description: </label>
+						<div class="card-description"></div>
+					</div>
+					<div class="card-field">
+						<label>Direction: </label>
+						<div class="card-direction"></div>
+					</div>
+					<div class="card-field">
+						<label>ID: </label>
+						<div class="card-accidentID"></div>
+					</div>
+					<div class="card-field">
+						<label>Google Maps: </label>
+						<div class="card-maps"></div>
+					</div>
+					<div class="card-field">
+					</div>
+				</div>
+			</template>
+        </div>
+        <div id="cards">
+
+        </div>
+    </div>
+    
+</body>
+</html>
