@@ -1,0 +1,8 @@
+001 Here is where I learned how to load pages using html
+    https://www.w3schools.com/js/js_window_location.asp
+
+002 I couldn' find out why there's a "0" appended to the second value in
+    the card 
+
+003 Here is where I learned how to open a new tab when click on something
+    https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_link_target

@@ -1,0 +1,115 @@
+@media all {
+    body {
+
+        background-color: #548cb6;
+
+    }
+    .buttons{
+        margin-left: 40%;
+        margin-top: 40px;
+        margin-bottom: 70px;
+    }
+    .hidden {
+        display: none;
+    }
+    h2{
+        text-align: center;
+        color: white;
+    }
+    .search{
+        display: flex;
+    }
+    .search-input-area {
+        border: 1px solid black;
+        box-shadow: 2px 2px 12px darkslategrey;
+        width: 370px;
+        min-width: 370px;
+        padding: 20px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .dialog-text {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .input-field {
+        display: inline-flex;
+        margin-bottom: 10px;
+    }
+    .input-field label {
+        text-align: right;
+        width: 70px;
+        min-width: 70px;
+        padding: 5px 10px;
+    }
+    .input-field input {
+        width: 200px;
+    }
+    .input-field span {
+        text-align: center;
+        width: 50px;
+    }
+
+    #output-area {
+        border: 1px solid black;
+        box-shadow: 2px 2px 12px darkslategrey;
+        width: calc(100% - 50px);
+        padding: 20px;
+    }
+
+    #searchvalue {
+        font-size: 16px;
+        font-style: italic;
+    }
+    .search-type {
+        font-size: smaller;
+        margin-left: 10px;
+    }
+    #searchresults {
+        display: inline-flex;
+        /*
+        border: 1px solid black;
+        box-shadow: 2px 2px 12px darkslategrey;
+        */
+        width: calc(100% - 40px);
+        padding: 10px;
+    }
+    div#cards {
+        /* Lets us a flex box */
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div.card {
+        display: block;
+        border: 1px solid black;
+        border-radius: 3px;
+        box-shadow: 2px 2px 12px darkslategrey;
+        padding: 10px;
+        margin: 5px;
+    }
+    .card-match {
+        background-color:rgba(34, 139, 34, 0.602);
+        color: white;
+        padding: 4px;
+        border-radius: 5px;
+    }
+    .card-field {
+        /* Lets us a flex box */
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card-field label {
+        width: 80px;
+    }
+}
+
+@media print {
+    body {
+        background-image: none;
+        background-color: none;
+        font-family: sans-serif;
+    }
+}
